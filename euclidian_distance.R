@@ -3,6 +3,7 @@
 
 # setup
 library(tidyverse)
+library(emuR)
 
 # load formant tables
 # DORIE
@@ -15,7 +16,6 @@ formants_dorie$vowel <- gsub("[0-9]", "", formants_dorie$Label)
 formants_nemo$vowel <- gsub("[0-9]", "", formants_nemo$Label)
 
 # Hz to Bark
-library(emuR)
 # DORIE
 formants_dorie$F1_mean.Bark <- bark(formants_dorie$F1_mean.Hz.)
 formants_dorie$F2_mean.Bark <- bark(formants_dorie$F2_mean.Hz.)
