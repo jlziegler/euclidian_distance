@@ -1,4 +1,5 @@
-
+### CALCULATE EUCLIDIAN DISTANCE OF ISOLATED VOWELS (BARK)
+### Joshua Ziegler, 29.04.2021
 
 # setup
 library(tidyverse)
