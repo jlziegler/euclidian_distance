@@ -65,6 +65,13 @@ dor_u <- meansd_dorie %>%
 dist_e_o <- euclid(dor_e, dor_o)
 dist_e_u <- euclid(dor_e, dor_u)
 dist_u_o <- euclid(dor_u, dor_o)
+# combine
+dist_dor <- c(dist_e_o, dist_e_u, dist_u_o)
+# rownames
+contr_dor <- c("e_o", "e_u", "u_o")
+
+# table
+dor_euclid <- data.frame(contr_dor, dist_dor)
 
 # NEMO
 # vector by vowel
@@ -82,3 +89,11 @@ nemo_ue <- meansd_nemo %>%
 dist_ae_oe <- euclid(nemo_ae, nemo_oe)
 dist_ae_ue <- euclid(nemo_ae, nemo_ue)
 dist_ue_oe <- euclid(nemo_ue, nemo_oe)
+
+# combine
+dist_nemo <- c(dist_ae_oe, dist_ae_ue, dist_ue_oe)
+# rownames
+contr_nemo <- c("ae_oe", "ae_ue", "ue_oe")
+
+# table
+nemo_euclid <- data.frame(contr_nemo, dist_nemo)
