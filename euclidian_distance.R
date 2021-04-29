@@ -106,3 +106,5 @@ write.csv(meansd_dorie, "mean_sd_dorie.csv")
 write.csv(meansd_nemo, "mean_sd_nemo.csv")
 write.csv(dor_euclid, "euclid_dorie.csv")
 write.csv(nemo_euclid, "euclid_nemo.csv")
+
+######
