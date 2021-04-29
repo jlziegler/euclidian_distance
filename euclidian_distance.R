@@ -41,7 +41,44 @@ meansd_nemo <- formants_nemo %>%
   summarise(mean = mean(value), sd = sd(value))
 
 # Euclidian Distance
+# define function
+euclid <- function(a, b)
+{
+  # Function to calculate Euclidean distance between a and b; 
+  # a and b are vectors of the same length
+  sqrt(sum((a - b)^2))
+}
 
+# DORIE
+# vector by vowel
+dor_e <- meansd_dorie %>%
+      filter(vowel == "e") %>%
+      pull(mean)
+dor_o <- meansd_dorie %>%
+  filter(vowel == "o") %>%
+  pull(mean)
+dor_u <- meansd_dorie %>%
+  filter(vowel == "u") %>%
+  pull(mean)
 
+# calculate euclidian distance
+dist_e_o <- euclid(dor_e, dor_o)
+dist_e_u <- euclid(dor_e, dor_u)
+dist_u_o <- euclid(dor_u, dor_o)
 
+# NEMO
+# vector by vowel
+nemo_ae <- meansd_nemo %>%
+  filter(vowel == "ae") %>%
+  pull(mean)
+nemo_oe <- meansd_nemo %>%
+  filter(vowel == "oe") %>%
+  pull(mean)
+nemo_ue <- meansd_nemo %>%
+  filter(vowel == "ue") %>%
+  pull(mean)
 
+# calculate euclidian distance
+dist_ae_oe <- euclid(nemo_ae, nemo_oe)
+dist_ae_ue <- euclid(nemo_ae, nemo_ue)
+dist_ue_oe <- euclid(nemo_ue, nemo_oe)
