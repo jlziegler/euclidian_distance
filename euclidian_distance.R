@@ -98,3 +98,11 @@ contr_nemo <- c("ae_oe", "ae_ue", "ue_oe")
 
 # table
 nemo_euclid <- data.frame(contr_nemo, dist_nemo)
+
+# export as csv
+write.csv(formants_dorie, "formants_dorie.csv")
+write.csv(formants_nemo, "formants_nemo.csv")
+write.csv(meansd_dorie, "mean_sd_dorie.csv")
+write.csv(meansd_nemo, "mean_sd_nemo.csv")
+write.csv(dor_euclid, "euclid_dorie.csv")
+write.csv(nemo_euclid, "euclid_nemo.csv")
