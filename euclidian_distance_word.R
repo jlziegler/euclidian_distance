@@ -95,5 +95,5 @@ word_euclid <- data.frame(contrast_word, dist_word)
 
 # write.csv
 dir.create("word")
-write_csv2(meansd_word, "word_mean_sd_Bark.csv")
-write_csv2(word_euclid, "word_euclid_Bark.csv")
+write_csv2(meansd_word, "word/word_mean_sd_Bark.csv")
+write_csv2(word_euclid, "word/word_euclid_Bark.csv")
