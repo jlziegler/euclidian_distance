@@ -62,7 +62,7 @@ dor_u <- meansd_dorie %>%
   filter(vowel == "u") %>%
   pull(mean)
 
-# calculate euclidian distance
+# calculate euclidian distance (F1, F2, F3)
 dist_e_o <- euclid(dor_e, dor_o)
 dist_e_u <- euclid(dor_e, dor_u)
 dist_u_o <- euclid(dor_u, dor_o)
